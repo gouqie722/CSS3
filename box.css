@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 可动态添加的导航栏 */
+/* .wrap{
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    display: flex;
+}
+.item{
+    flex: 1 1 auto;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #f20;
+    border-radius: 20px;
+}
+.item:hover{
+    color: #fff;
+    background-color: #f20;
+} */
+/* 等分布局 */
+/* .wrap{
+    width: 400px;
+    height: 200px;
+    border: 1px solid #000;
+    display: flex;
+}
+.content{
+    flex: 1 1 auto;
+    border: 1px solid #0f0;
+    box-sizing: border-box;
+    height: 100px;
+}
+.content:nth-of-type(2){
+    flex: 0 0 200px;
+} */
+/* 流式布局 */
+/* .wrap{
+    width: 400px;
+    height: 900px;
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.content{
+    width: 100px;
+    border: 1px solid #0f0;
+    box-sizing: border-box;
+    height: 100px;
+} */
+/* 圣杯布局 */
+/* .wrap{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+.header, .footer{
+    flex: 0 0 20%;
+    border: 1px solid #0f0;
+    box-sizing: border-box;
+}
+.container{
+    flex: 1 1 auto;
+    display: flex;
+}
+.left, .right{
+    flex: 0 0 20%;
+    border: 1px solid #ff0;
+    box-sizing: border-box;
+}
+.center{
+    flex: 1 1 auto;
+} */

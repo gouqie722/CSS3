@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            float: left;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <img src="./4.jpg" alt="">
+    <img src="./4.jpg" alt="">
+    <img src="./4.jpg" alt="">
+    <img src="./4.jpg" alt="">
+    <img src="./4.jpg" alt="">
+    <!-- (reflow)重构            (repaint)
+    逻辑图(多层矢量图) --- 实际绘制(栅格化)
+    cpu
+    google chrome gpu
+
+
+    reflow:
+        改变窗口大小
+        改变文字大小
+        内容的改变，输入框输入文字
+        激活伪类 :hover
+        操作class属性
+        脚本操作DOM
+        计算offsetWidth和offsetHeight
+        设置style属性
+
+    repaint:
+        如果只是改变某个元素的背景色，文字颜色，边框颜色，不影响它周围或者内部布局的属性
+    repaint速度快鱼reflow
+
+
+    will-change:transform;  //  监听    另一个层面渲染  避免浪费性能 -->
+</body>
+</html>

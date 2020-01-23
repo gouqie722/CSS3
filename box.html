@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./box.css" />
+  </head>
+  <body>
+    <!-- 可动态添加的导航栏 -->
+    <!-- <div class="wrap">
+        <div class="item">天猫</div>
+        <div class="item">淘宝</div>
+        <div class="item">京东</div>
+        <div class="item">聚划算</div>
+    </div> -->
+    <!-- 等分布局 -->
+    <!-- <div class="wrap">
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+    </div> -->
+    <!-- 流式布局 -->
+    <!-- <div class="wrap">
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+    </div> -->
+    <!-- 圣杯布局 -->
+    <div class="wrap">
+      <div class="header"></div>
+      <div class="container">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+      </div>
+      <div class="footer"></div>
+    </div>
+
+    <script>
+      /*
+        ie6混杂模式     计算方式跟原来的不一样
+        宽度不固定，内边距固定
+            resize:both;配合overflow使用，可以随意调整大小
+            box-sizing:border-box;
+            margin  border padding content
+
+            boxwidth = width + border*2 + padding*2
+            boxwidth = width
+            content = width - border*2 - padding*2
+    */
+
+      /*
+    
+        flex弹性模型    display:flex;
+
+        设置到父元素身上的属性：
+        默认不换行
+        主轴默认自左向右，flex-direction:row/row-reverse/colimn/column-revese;  默认自左向右，自右向左，从上到下，从下到上
+        默认不换行
+        换行flex-wrap:wrap/nowrap; 换行/不换行
+        基于主轴做对齐方式
+        justify-content:flex-start/end/center/space-between/space-around; 默认对齐，end是右部对齐，center是中间对齐,space-between是一边占一个角，中间自适应，space-around尽量的把一堆元素的边距相等，跟between差不多，就是多加了个边距
+        基于交叉轴对齐方式 默认值stretch    align-items主要针对单行元素处理对齐方式
+        align-items:flex-start/flex-end/center/baseline/stretch;    flex-start是到底部  center是垂直居中    baseline元素基于内容对齐    stretch如果没设置高度，自动撑开，如果设置高度steetch就不好使了
+
+        align-content主要针对多行元素处理对齐方式，单行不好使
+        align-content:space-between/space-;     上下占领，中间自适应/给上下两边加边距       默认值strategy
+
+        设置到子元素身上的属性:
+        order谁小谁在前面   默认值是0   跟index差不多
+        子项作为一个个体，基于交叉轴的一个分配状态
+        align-self:flex-start/flex-end; 子项比父级的优先级大    start最上面，end最下面，center垂直居中，baseline元素基于内容对齐，strategy如果没设置高度，自动撑开
+        如果跟align-items比较的话，align-self优先级大
+        如果是跟align-content比较的话，align-content优先级大
+
+        flex:flex-grow  flex-shrink flex-basis(复合值)
+        flex-grow:1;    当这一行还有剩余空间的时候，根据1:1的比例分配剩余的空间
+        
+        flex-shrink:;   缩      (内容区的宽度*shrink的比例)加全值(每个元素的内容区的宽度*shrink的比例相加得出的值)  每个元素所缩减的值是(当前元素宽度*shrink的比例)/全值再*多出来的像素(所有子元素宽度加起来超出父级的多少像素)      计算的是真实内容区的宽度而不是盒子宽度  
+
+        只写basis代表元素最小宽度
+        flex-basis:;    flex-basis比width优先级高，几乎完全取代width    能被内容撑开  默认auto跟width一样
+        在你设置宽的时候，如果basis设置有值，且小于width，那么真实宽的范围在basis < realWidth < width
+        在你不设置width的时候，设置basis，元素真实的宽  min-width = basis
+        当不换行内容撑开超过内容区的时候不会被压缩计算
+        无论什么情况下，被不换行内容撑开的容器，不会被压缩计算
+        只写了basis，代表元素的最小宽度
+
+    */
+      /* 父级上的属性
+        display: flex/inline-flex; 
+        默认的主轴方向是自左向右、竖直方向为交叉轴
+        主轴可以切换为垂直方向，而交叉轴为水平方向
+        flex-direction：row(主轴方向自左向右，默认值为row)|row-reverse(对齐方式于row相反)|column(主轴方向为从上到下，顶对齐)|column-reverse(对齐方式与column相反)
+        flex-wrap: wrap(当主轴方向宽度不够时进行换行)|nowrap(默认为不换行)|wrap-reverse(反着换行);
+        justify-content: 基于主轴做一个对齐方式   flex-start(默认为起始位置对齐)|flex-end(主轴的另一端对齐)|center(基于主轴居中对齐)|space-between(主轴两端占满中间自适应分配并且保持间距)|space-around(盒子两边保持保持间距中间自适应分配);
+        align-items:基于交叉轴做一个对齐方式 flex-start(起始位置对齐)|flex-end(在交叉轴的另一端对齐)|center(在交叉轴居中对齐)|baseline(让里面的元素基于内容底线对齐，跟宽高没有关系);
+        align-items: stretch;(在子元素没设置高度的情况下，子元素的高度和父级一样高)
+        align-items主要还是针对单行元素来处理居中对齐方式的
+        align-content: 跟align-items的作用是一样的(基于交叉轴)，只不过align-content是针对多行元素来处理对齐方式的， 主要用于基于交叉轴来进行多行元素位置分配
+        子元素的属性
+        order: number  数值越小，越排前头   默认值为0
+        align-self: 是子项作为一个单独的个体它基于一个交叉轴的分配状况    如果父级设置了align-content，则align-self不好使
+        flex: flex-grow|flex-shrink|flex-basis
+        flex-grow:伸 number(按number的比例分配剩余空间)  当我们这一行还有剩余空间的时候，flex-grow就会根据自己的比例让这个盒子伸张到一定的程度来瓜分剩余的空间
+        flex-shrink: 缩 number()
+        flex-basis: 是用来替代width的，同时设置比width的权重更高 会覆盖width
+        */
+    </script>
+  </body>
+</html>

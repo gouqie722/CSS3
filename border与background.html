@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #000;
+        } */
+        
+        /* div{
+            position: absolute;
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            box-shadow: 0px 1px 2px rgba(0,0,0, .1);
+            transition: all .6s;
+        }
+        div::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: all .6s;
+        }
+        div:hover{
+            transform: scale(1.25,1.25);
+        }
+        div:hover::after{
+            opacity: 1;
+        } */
+        /* div{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left:calc(50% - 150px);
+            top:calc(50% - 150px);
+            
+            border-radius: 50%;
+            box-shadow:inset 0px 0px 50px #fff,
+                       inset 10px 0px 80px #f0f,
+                       inset -10px 0px 80px #0ff,
+                       inset 10px 0px 300px #f0f,
+                       inset -10px 0px 300px #0ff,
+                       0px 0px 50px #fff,
+                       -10px 0px 80px #f0f,
+                       10px 0px 80px #0ff;
+        } */
+
+        /* div:hover{
+            background-position: center center;
+        }
+        div{
+            position: absolute;
+            left: calc(50% - 200px);
+            top: 100px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 100px;
+            font-weight: bold;
+            width: 1000px;
+            background-image: url(./4.jpg);
+            -webkit-background-clip:text;
+            background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-position: 0 0;
+            transition: all 1.5s;
+        } */
+        /* div{
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(90deg,0deg,red,blue);
+            background-image: linear-gradient(90deg,0deg,red,blue);
+        } */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(30deg, 120deg, #f40, #ff0);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <!-- border-radius    -->
+    <!--  默认外阴影  inset内阴影  box-shadow    水平偏移量    垂直偏移量     模糊值     在水平和垂直方向同时增加距离     颜色 -->
+
+    <!-- border-image:  支持渐变色  不能填ps
+                        border-image: source slice repeat;
+                        border-image-source:;   背景图片
+                        border-image-slice:;    必填
+                        border-image-outset:;   可以延伸
+                        border-image-width:;    设置border里面能显示图片背景的宽度   默认值是1，auto会像slice看齐一般不用
+                        border-image-repeat:;   支持两个参数，一个水平一个垂直
+                        stretch round   repeat  space   平铺 repeat的属性
+    -->
+
+
+
+    <!-- background:
+                    background-image: linear-gradient(orange,red); 渐变色
+                    background-image: url(),url();  添加多张照片
+                    background-size:100px 200px, 100px 200px;
+                    background-repeat:no-repeat;    填充
+                    background-position: 0 0, 100px 0;  相对于origin定位
+                    background-origin:;定位   border-box    默认值padding-box     content-box          配合repeat用
+                    background-clip:;背景图片打padding以外截断不能显示背景图片  配合origin使用  默认值border-box padding-box content-box     text
+                                    text用文字的部分截取背景图片    只能用-webkit
+                                    -webkit-background-clip:text;
+                                    background-clip:text;
+                                    -webkit-text-fill-color:transparent;
+                                    text-fill-colo:transparent;
+
+                    background-attachment:; 改变定位属性    默认值scroll    local它相对与容器里面的内容区定位   flexd
+                    background-size:;   
+                                cover / contain 都是用一张图片填充背景  但规则不一样
+                                cover：用一张图片完完整整的填充这个容器，不改变这个图片的原始比例
+                                contain：在不改变图片原有的比例下，让容器包含一张完整的图片
+                    background-repeat:; no-repeat   repeat-X    rapeat-Y    round平铺   space拿空白填充
+
+    
+                    overflow:scroll;溢出滚动条
+
+
+
+                    渐变linear-gradient();
+                                linear-gradient(to right, red,orange); 从右到左渐变，默认从上到下
+                        放射性   radial-gradient();
+                                radial-gradient(red,green);
+
+
+
+    -->
+    <div></div>
+    <!-- <div></div> -->
+</body>
+</html>

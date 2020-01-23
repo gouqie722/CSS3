@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            transition: all 1s cubic-bezier(.5,1.5,.8,3);
+        }
+        div:hover{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+    /*
+        transition过渡动画
+        transition-property:width,height;  规定什么属性可以过渡 必填
+        transition-duration:1s;         运动时间    必填
+        transition-timing-function:;    运动状态
+        transition-delay:1s;              延迟 
+    */
+
+    /*
+        三次贝赛尔曲线
+
+        y1 - y2
+       ---------  =  k
+        x1 - x2
+    
+                                        (x,y)   (x,y)
+        transition:  all 1s cubic-bezier(.7,-1.5,.7,2); 必填四个值  1,x值   2，y值  3,x值  4，y值
+        起点和终点  还有控制点  起点00  终点11  x轴0-1之间  y轴可以大于1也可以小于0
+    
+    */
+    </script>
+    <div></div>
+</body>
+</html>
