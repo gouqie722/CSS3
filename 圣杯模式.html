@@ -15,17 +15,17 @@
         width: 100%;
         height: 100%;
     }
-    .wrapper{
+    /* .wrapper{
         width: 100%;
         height: 100%;
         display:flex;
         flex-direction: column; /*交叉轴*/
     }
-    .header,.footer{
+    /* .header,.footer{
         background-color: aquamarine;
         flex: 0 0 20%;
     }
-    .contain{   /*中间自适应*/
+    .contain{   中间自适应
         display: flex;
         flex: 1 1 auto;
     }
@@ -40,10 +40,43 @@
     .right{
         background-color: red;
         flex: 0 0 20%;
-    }
+    } */
 
-    
-    
+    html, body{
+        width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  flex: 0 0 45px;
+  background-color: #8ecfd4;
+}
+.footer{
+  flex: 0 0 75px;
+  background-color: #8ecfd4;
+}
+.contain{
+  display: flex;
+  flex: 1 1 auto;
+}
+.center{
+  background-color: #f7f537;
+  flex: 1;
+}
+.left, .right{ 
+  flex: 0 0 200px;
+  background: yellowgreen;
+}
+.left{
+  order: -1;
+}
     </style>
 </head>
 <body>

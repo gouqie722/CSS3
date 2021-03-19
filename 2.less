@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .header{
+        width: 100%;
+        height: 200px;
+        background-color: seagreen;
+    }
+    .main{
+        width: 100%;
+        height: calc(100% - 200px);
+        overflow-y: auto;
+        /* background-color: sandybrown; */
+        background-image: linear-gradient(seagreen, sandybrown);
+    }
+}

@@ -1,0 +1,23 @@
+.wrap{
+    width: 800px;
+    height: 500px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.item{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.item div{
+    width: 100px;
+    height: 100px;
+    background-color: rosybrown;
+}

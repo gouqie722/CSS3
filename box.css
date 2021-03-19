@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+html, body{
+    width: 100%;
+    height: 100%;
+}
 /* 可动态添加的导航栏 */
 /* .wrap{
     width: 300px;
@@ -53,10 +57,9 @@
     height: 100px;
 } */
 /* 圣杯布局 */
-/* .wrap{
-    width: 300px;
-    height: 300px;
-    border: 1px solid #000;
+.wrap{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -76,4 +79,4 @@
 }
 .center{
     flex: 1 1 auto;
-} */
+}
